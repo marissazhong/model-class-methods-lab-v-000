@@ -26,4 +26,8 @@ class Boat < ActiveRecord::Base
   def sailboats
 
   end
+
+  def with_three_classifications
+
+  end
 end
