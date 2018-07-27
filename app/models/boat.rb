@@ -28,6 +28,6 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
-    having("classifications.length = ?", 3)
+    includes(:classifications).having(count(:classifications))
   end
 end
