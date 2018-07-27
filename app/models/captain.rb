@@ -5,6 +5,9 @@ class Captain < ActiveRecord::Base
   end
 
   def self.sailors
+    where(boat: {classification: "Sailboat"})
+
+    includes(:classifications).where(classifications: {name: "Sailboat"})
 
   end
 
