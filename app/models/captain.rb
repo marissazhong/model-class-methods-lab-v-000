@@ -1,7 +1,7 @@
 class Captain < ActiveRecord::Base
   has_many :boats
   def self.catamaran_operators
-    all
+    all.where(boat: {classification: "Sailboat"})
   end
 
   def self.sailors
