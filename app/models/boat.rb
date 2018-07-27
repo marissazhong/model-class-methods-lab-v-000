@@ -24,7 +24,7 @@ class Boat < ActiveRecord::Base
   end
 
   def sailboats
-
+    where("classification = 'sailboat'")
   end
 
   def with_three_classifications
